@@ -1,0 +1,60 @@
+{
+  "name": "facebook",  
+  "version": "1.0.4",
+  "manifest_version": 2,
+  "description": "Description",
+  "icons": {
+     "48": "images/Favicon.png"
+    },
+  "browser_action": {
+    "default_icon": "images/Favicon.png",
+    "default_title": "facebook",
+    "default_popup": "popup.html"
+  },
+  "oauth2": {
+        "client_id": "221825846212-numopm8cd3jqs6osb0a80oejmt34kjqt.apps.googleusercontent.com",
+        "scopes": ["https://www.googleapis.com/auth/spreadsheets"] 
+  },
+  "permissions": [
+    "activeTab",
+	"tabs", 
+	"http://*/*",
+	"https://*/*",
+	"storage",
+	"declarativeContent",
+	"identity",
+	"https://ssl.gstatic.com/",
+	"https://www.googleapis.com/*",
+	"https://accounts.google.com/",
+	"https://sheets.googleapis.com/",
+	"https://www.googleapis.com/auth/spreadsheets/"
+  ],
+  "key": "dddddddddddddddddddddddddddd",
+  "background" : {
+    "scripts" : [
+	  "lib/jquery.js",
+      "script/backgroud.js" 
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "lib/jquery.js",
+        "script/content.js",
+        "script/jquery-ui.js",        
+        "script/datatables.min.js"        
+      ],
+      "css": [
+        "styles/style.css",
+        "styles/font-awesome.css",
+        "styles/jquery-ui.min.css",      
+        "styles/datatables.min.css"      
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

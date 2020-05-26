@@ -1,0 +1,13 @@
+https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId/values/Sheet1!A1:D5
+https://developers.google.com/sheets/api/samples/reading
+https://docs.google.com/spreadsheets/d/1RH9Nj77ku_mL2kacSGJIAU-ZDNvIqMrUzzf1PBkZyTo/edit#gid=0
+https://stackoverflow.com/questions/50881005/google-sheet-api-message-the-request-is-missing-a-valid-api-key
+
+https://sheets.googleapis.com/v4/spreadsheets/1RH9Nj77ku_mL2kacSGJIAU-ZDNvIqMrUzzf1PBkZyTo/values/Sheet1!A1:D3?majorDimension=COLUMNS
+
+API KEY: AIzaSyBLhR2kw4j9VUfYgkX_UrRBQnKd_dn6G4M
+
+
+https://sheets.googleapis.com/v4/spreadsheets/1RH9Nj77ku_mL2kacSGJIAU-ZDNvIqMrUzzf1PBkZyTo/values/Sheet1!A1:D3?majorDimension=COLUMNS&key=AIzaSyBLhR2kw4j9VUfYgkX_UrRBQnKd_dn6G4M
+
+https://console.developers.google.com/apis/credentials/oauthclient?previousPage=%2Fapis%2Fcredentials%3Fproject%3Dgraph-api-208606&project=graph-api-208606
