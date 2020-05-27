@@ -1,0 +1,15 @@
+https://developers.google.com/sheets/api/samples
+https://console.developers.google.com/apis/credentials?project=dogwood-reality-278417
+https://console.developers.google.com/apis/credentials?project=graph-api-208606&folder=&organizationId=
+https://stackoverflow.com/questions/54340296/google-sheets-api-throwing-401-error-while-append-rows-to-spreadsheet-without-lo
+
+
+valueInputOption: USER_ENTERED
+includeValuesInResponse: true
+insertDataOption: INSERT_ROWS
+alt: json
+
+
+{values: [["Door", "$15", "2", "3/15/2016"]]}
+values: [["Door", "$15", "2", "3/15/2016"]]
+0: ["Door", "$15", "2", "3/15/2016"]

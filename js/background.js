@@ -21,25 +21,24 @@ function findCoach(email,imFinish){
 				var appendPre = console.log;
 				
 				var values = [
-				  [
-					'dddddd'
-				  ],
-				  // Additional rows ...
+				  ["Door", "$15", "2", "3/15/2016"],
+    			  ["Engine", "$100", "1", "3/20/2016"],
 				];
 				var body = {
 				  values: values
 				};
-				
 				gapi.client.sheets.spreadsheets.values.append({
 				   spreadsheetId: manifestData.oauth2.spreadsheetId,
-				   range: 'A1:F',
-				   resource: body
+				   range: 'A4:C',
+				   valueInputOption: 'USER_ENTERED',
+				   resource: body,
+				   key: manifestData.oauth2.key,
 				}).then((response) => {
-					console.log(response,'response');
+				  var result = response.result;
+				  console.log(`${result.updates.updatedCells} cells appended.`)
 				});
-				
-				
-				gapi.client.sheets.spreadsheets.values.get({
+								
+				gapi.client.sheets.spreadsheets.values.append({
 					spreadsheetId: manifestData.oauth2.spreadsheetId,
 					range: 'A1:C',
 					key: manifestData.oauth2.key,
