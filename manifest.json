@@ -1,60 +1,49 @@
+
+
 {
-  "name": "facebook",  
-  "version": "1.0.4",
-  "manifest_version": 2,
-  "description": "Description",
-  "icons": {
-     "48": "images/Favicon.png"
+   "name": "Sample Extension",
+   "version": "1.0",
+   "description": "Hello World",
+   "permissions": ["https://docs.google.com/spreadsheets/","https://script.google.com/",
+      "https://sheets.googleapis.com/*","identity", "identity.email"
+      ,"tabs", 
+      "storage",
+      "management", "notifications", "webRequestBlocking", "unlimitedStorage"
+   ],
+   "author": "Jess",
+   "icons":{  
+      "128":"img/icon.png"
+   },
+   "background": {
+      "scripts": ["./libs/jquery.min.js","./js/shared.function.js","./js/background.js"],
+      "persistent": true
     },
-  "browser_action": {
-    "default_icon": "images/Favicon.png",
-    "default_title": "facebook",
-    "default_popup": "popup.html"
-  },
+   "content_scripts": [{
+     "matches": ["*://*.mail.google.com/*"],
+     "js"     : [ 
+        "./libs/jquery.min.js",
+        "./js/shared.function.js", 
+        "./js/content.script.js",
+        "./js/main.js"
+      ],
+     "run_at": "document_end",
+      "all_frames": false
+   }],
+   "browser_action":{  
+      "default_icon":"img/icon.png",
+      "default_title":"Execution API Example",
+      "default_popup":"popup.html"
+   },
   "oauth2": {
-        "client_id": "221825846212-numopm8cd3jqs6osb0a80oejmt34kjqt.apps.googleusercontent.com",
-        "scopes": ["https://www.googleapis.com/auth/spreadsheets"] 
-  },
-  "permissions": [
-    "activeTab",
-	"tabs", 
-	"http://*/*",
-	"https://*/*",
-	"storage",
-	"declarativeContent",
-	"identity",
-	"https://ssl.gstatic.com/",
-	"https://www.googleapis.com/*",
-	"https://accounts.google.com/",
-	"https://sheets.googleapis.com/",
-	"https://www.googleapis.com/auth/spreadsheets/"
-  ],
-  "key": "dddddddddddddddddddddddddddd",
-  "background" : {
-    "scripts" : [
-	  "lib/jquery.js",
-      "script/backgroud.js" 
-    ]
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://*/*",
-        "http://*/*"
-      ],
-      "js": [
-        "lib/jquery.js",
-        "script/content.js",
-        "script/jquery-ui.js",        
-        "script/datatables.min.js"        
-      ],
-      "css": [
-        "styles/style.css",
-        "styles/font-awesome.css",
-        "styles/jquery-ui.min.css",      
-        "styles/datatables.min.css"      
-      ],
-      "run_at": "document_end"
-    }
-  ]
-}
+     "client_id": "221825846212-3hsfoa1rqijim0kike9tnmntfgbj845p.apps.googleusercontent.com",
+     "spreadsheetId": "1RH9Nj77ku_mL2kacSGJIAU-ZDNvIqMrUzzf1PBkZyTo",
+     "key":"AIzaSyBLhR2kw4j9VUfYgkX_UrRBQnKd_dn6G4M",
+     "scopes": [
+         "https://www.googleapis.com/auth/spreadsheets.readonly",
+         "https://www.googleapis.com/auth/userinfo.email",
+         "profile"
+    ]},
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://apis.google.com/; object-src 'self'",
+   "manifest_version": 2,
+   "web_accessible_resources": [ "*.*" ]
+ }

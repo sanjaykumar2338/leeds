@@ -1,54 +1,17 @@
-<!--Start Section -->
-<html lang="en">
-   <!-- Header Section -->
-<head>
-    <!-- Tittle Section  -->
-    <title>facebook</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/font-awesome.css">
-</head>
-<body>
-    <!--- Body Part -->
- <img class="cross-icon" src="images/x.png">
-  <div class="as-center button-info display-none show div_one_main">
-        <img src="images/intern-logo.png" alt="extension_logo" style="margin-top: 20px;">
-        <p class="pop-up_text">We will collect the data in matter of seconds</p>
-      <button class="input-btn start-button div_one">Start Extracting</button>
-        <p class="pop-up_footer-text">We will collect the data in matter of seconds</p>
-     
-  </div>
+<!DOCTYPE html>
 
-<div class="as-center button-info display-none div_two_main">
-     <div class="loader"></div>
-     <p class="pop-up_text-heading">Extracting Pages </span></p>
-        <p class="pop-up_text">Wait till its done</p>
-        <p class="pop-up_text">You can not use the Browser now..</p>
-            <button class="input-btn end-button div_two">Stop Extracting</button>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
+        <meta content="utf-8" http-equiv="encoding">
+       
 
-             
-  </div>
-
-    <div class="as-center button-info display-none div_three_main">
-      <div class="right"><img src="images/right.png" alt="extension_logo" style="margin-top: 20px;"></div>
-          <p class="pop-up_text-heading">Sucess</p>
-        <p class="pop-up_text">Click the button below to download</p>
-        <button class="input-btn scrap-button">Download CSV</button>
-        
-     
-  </div>
-
-
-    <!-- Footer Section -->
-  <div class="footer">
-    <p class="pop-up_footer-text">v 1.0-Intern Full Version</p>
-    <div class="button button-on-off" style="display: none;"></div>
-        <div class="separator" style="display: none;"></div>
-        <div class="pane" style="float: left;"></div>
-  </div>
-   <!-- JavaScripts -->
-    <script src="lib/jquery.js"></script>
-    <script src="script/toggle.js"></script>
-    <script type="text/javascript" src="script/popup.js"></script>
-</body>
+    <body>
+        <button id="authorize_button" style="display: none;">Authorize</button>
+        <button id="signout_button" style="display: none;">Sign Out</button>
+        <script src="jq.js"></script>
+        <script src="shared.function.js"></script>
+      <script src="popup.js"></script>
+    </body>
 </html>
-<!--End Section -->
